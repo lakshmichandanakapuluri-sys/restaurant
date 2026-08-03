@@ -47,7 +47,6 @@ export default function MenuPage() {
 
   return (
     <main className="min-h-screen bg-[#F9FAFB] text-gray-800">
-      {/* Navbar Header */}
       <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6">
           <Link
@@ -77,7 +76,6 @@ export default function MenuPage() {
         </div>
       </header>
 
-      {/* Hero / Search Section */}
       <section className="bg-white border-b border-gray-100 py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-7xl text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -97,7 +95,7 @@ export default function MenuPage() {
             />
           </div>
 
-          {/* Categories Filter Tabs */}
+
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
             {categories.map((category) => (
               <button
@@ -116,7 +114,6 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Menu Grid Section */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         {filteredItems.length === 0 ? (
           <div className="text-center py-20">

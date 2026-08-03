@@ -8,7 +8,7 @@ type CartItem = {
   id: string;
   name: string;
   price: number;
-  image?: string; // Added image property
+  image?: string; 
   emoji?: string;
   quantity: number;
 };
@@ -72,7 +72,6 @@ export default function MyCartPage() {
 
   return (
     <main className="min-h-screen bg-[#F8F9FA] text-[#111827]">
-      {/* Header */}
       <header className="sticky top-0 z-30 border-b border-[#E5E7EB] bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link
@@ -125,14 +124,12 @@ export default function MyCartPage() {
           </div>
         ) : (
           <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_360px]">
-            {/* Items */}
             <div className="space-y-4">
               {cart.map((item) => (
                 <div
                   key={item.id}
                   className="flex items-center gap-5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm transition-all hover:border-[#D1D5DB]"
                 >
-                  {/* Fixed Image Thumbnail Rendering */}
                   <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-[#F3F4F6]">
                     {item.image ? (
                       <Image
@@ -203,7 +200,6 @@ export default function MyCartPage() {
               ))}
             </div>
 
-            {/* Summary */}
             <div className="h-fit rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
               <h2 className="text-lg font-bold text-[#111827]">
                 Order Summary

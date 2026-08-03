@@ -8,7 +8,6 @@ export default function QRScanPage() {
 
   return (
     <main className="min-h-screen bg-[#F8F9FA] text-[#111827]">
-      {/* Header */}
       <header className="sticky top-0 z-30 border-b border-[#E5E7EB] bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link
@@ -44,9 +43,7 @@ export default function QRScanPage() {
           ordering your favourite food.
         </p>
 
-        {/* Scanner Box Card */}
         <div className="relative mt-8 flex h-80 w-80 items-center justify-center rounded-3xl border border-[#E5E7EB] bg-white shadow-sm">
-          {/* Scanner Corner Reticles */}
           <div className="absolute left-6 top-6 h-10 w-10 border-l-4 border-t-4 border-[#E53935] rounded-tl-lg" />
           <div className="absolute right-6 top-6 h-10 w-10 border-r-4 border-t-4 border-[#E53935] rounded-tr-lg" />
           <div className="absolute bottom-6 left-6 h-10 w-10 border-b-4 border-l-4 border-[#E53935] rounded-bl-lg" />

@@ -107,6 +107,5 @@ return;
 }
 
 localStorage.removeItem(CART_KEY);
-
 window.dispatchEvent(new Event("cartUpdated"));
 }

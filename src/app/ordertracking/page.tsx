@@ -34,7 +34,6 @@ export default function OrderTrackingPage() {
 
   return (
     <main className="min-h-screen bg-[#F8F9FA] text-[#111827]">
-      {/* Header */}
       <header className="sticky top-0 z-30 border-b border-[#E5E7EB] bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link
@@ -95,7 +94,6 @@ export default function OrderTrackingPage() {
               </p>
             </div>
 
-            {/* Status Card */}
             <div className="mt-8 rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm sm:p-8">
               <h2 className="text-lg font-bold text-[#111827]">
                 Order Status
@@ -110,7 +108,6 @@ export default function OrderTrackingPage() {
                       key={step}
                       className="relative flex items-start gap-4"
                     >
-                      {/* Vertical line connector */}
                       {index !== steps.length - 1 && (
                         <div className="absolute left-5 top-10 h-full w-0.5 -translate-x-1/2 bg-[#E5E7EB]" />
                       )}
@@ -148,7 +145,6 @@ export default function OrderTrackingPage() {
               </div>
             </div>
 
-            {/* Order Info Cards */}
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-[#9CA3AF]">

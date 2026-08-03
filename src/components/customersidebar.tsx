@@ -18,7 +18,6 @@ export default function CustomerSidebar() {
 
   return (
     <aside className="flex h-screen w-64 flex-col border-r border-gray-100 bg-white p-4">
-      {/* Brand Logo Header */}
       <Link href="/" className="mb-6 flex items-center gap-2.5 px-2">
         <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#D9381E] text-sm font-black text-white shadow-md shadow-[#D9381E]/20">
           UV
@@ -26,7 +25,6 @@ export default function CustomerSidebar() {
         <span className="text-lg font-bold text-gray-900">UV Snacks</span>
       </Link>
 
-      {/* Navigation Links */}
       <nav className="flex-1 space-y-1 overflow-y-auto">
         {navItems.map((item) => {
           const isActive =

@@ -1,5 +1,3 @@
-// src/app/product/[id]/page.tsx
-
 "use client";
 
 import Link from "next/link";
@@ -14,7 +12,6 @@ export default function ProductPage() {
   const productId = params?.id as string;
   const [quantity, setQuantity] = useState(1);
 
-  // Match item by exact ID, lowercased ID, or numeric array index
   const item = menuItems.find(
     (i, index) => 
       i.id === productId || 
@@ -56,7 +53,6 @@ export default function ProductPage() {
 
   return (
     <main className="min-h-screen bg-[#F9FAFB] text-gray-800">
-      {/* Navbar Header */}
       <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6">
           <Link
@@ -86,7 +82,6 @@ export default function ProductPage() {
         </div>
       </header>
 
-      {/* Main Content */}
       <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
         <Link
           href="/menu"
@@ -119,7 +114,6 @@ export default function ProductPage() {
               </p>
             </div>
 
-            {/* Quantity Selection Controls */}
             <div className="mt-6 flex items-center gap-3">
               <span className="text-sm font-medium text-gray-700">Quantity:</span>
               <div className="flex items-center gap-2">

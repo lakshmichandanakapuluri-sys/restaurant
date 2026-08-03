@@ -7,11 +7,9 @@ export default function HomePage() {
   const pathname = usePathname();
   return (
     <main className="min-h-screen bg-[#120f0b] text-white">
-      {/* Navigation Bar */}
       <header className="sticky top-0 z-50 border-b border-amber-900/40 bg-[#18130e]/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           
-          {/* Logo */}
           <Link
             href="/"
             className="text-2xl font-bold text-amber-400"
@@ -19,7 +17,6 @@ export default function HomePage() {
             UV Snacks
           </Link>
 
-          {/* Navigation */}
           <nav className="hidden items-center gap-2 md:flex">
             <Link
               href="/"
@@ -71,7 +68,6 @@ export default function HomePage() {
             </Link>
           </nav>
 
-          {/* Mobile Menu Links */}
           <div className="flex gap-2 md:hidden">
             <Link
               href="/menu"
@@ -89,7 +85,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         <div className="flex gap-2 overflow-x-auto border-t border-amber-900/30 px-6 py-3 md:hidden">
           <Link
             href="/"
@@ -133,11 +128,9 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="mx-auto flex min-h-[calc(100vh-90px)] max-w-7xl items-center px-6 py-20">
         <div className="grid w-full gap-12 lg:grid-cols-2 lg:items-center">
           
-          {/* Left Content */}
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-amber-400">
               Welcome to UV Snacks
@@ -157,7 +150,6 @@ export default function HomePage() {
               order your favourite food and track your order.
             </p>
 
-            {/* Main Buttons */}
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/menu"
@@ -175,7 +167,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Food Card */}
           <div className="flex justify-center">
             <div className="relative flex h-[420px] w-full max-w-md items-center justify-center overflow-hidden rounded-3xl border border-amber-900/40 bg-[#1d1812] shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent" />
@@ -198,7 +189,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Navigation */}
       <section className="border-t border-amber-900/30 bg-[#18130e]">
         <div className="mx-auto max-w-7xl px-6 py-14">
           <h2 className="text-center text-3xl font-bold">
@@ -279,7 +269,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-amber-900/30 bg-[#120f0b] px-6 py-8 text-center">
         <p className="text-gray-500">
           © 2026 UV Snacks. All rights reserved.

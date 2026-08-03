@@ -70,7 +70,7 @@ export default function CheckoutPage() {
 
   return (
     <main className="min-h-screen bg-[#F8F9FA] text-[#111827]">
-      {/* Header */}
+  
       <header className="sticky top-0 z-30 border-b border-[#E5E7EB] bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link
@@ -106,7 +106,7 @@ export default function CheckoutPage() {
           onSubmit={placeOrder}
           className="mt-6 grid gap-8 lg:grid-cols-[1fr_360px]"
         >
-          {/* Customer Details */}
+
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-xl font-bold text-[#111827]">
               Customer Details
@@ -187,7 +187,6 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          {/* Order Summary */}
           <div className="h-fit rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
             <h2 className="text-lg font-bold text-[#111827]">
               Order Summary

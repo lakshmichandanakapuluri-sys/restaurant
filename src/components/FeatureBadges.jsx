@@ -20,7 +20,8 @@ export default function FeatureBadges() {
               </span>
             </div>
           );
-        })}
+        })
+        }
       </div>
 
   );

@@ -7,8 +7,7 @@ import {menuItems} from "@/lib/menuData";
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-50 text-neutral-900 pb-24">
-    
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200 px-6 py-3.5 flex items-center justify-between shadow-xs">
+     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200 px-6 py-3.5 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#D9381E] text-white font-bold">
             <span className="text-lg">UV</span>

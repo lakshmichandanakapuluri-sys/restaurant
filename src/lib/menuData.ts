@@ -45,7 +45,6 @@ const IMG_COMBO =
   'https://images.pexels.com/photos/12362926/pexels-photo-12362926.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
 
 export const menuItems: MenuItem[] = [
-  // MOMOS — Veg
   {
     id: 'm1',
     name: 'Steamed Momos (Veg)',
@@ -91,7 +90,6 @@ export const menuItems: MenuItem[] = [
     image: IMG_MOMOS_2,
     available: true,
   },
-  // MOMOS — Chicken
   {
     id: 'm6',
     name: 'Steamed Momos (Chicken)',
@@ -137,7 +135,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_MOMOS_2,
     available: true,
   },
-  // NOODLES
+
   {
     id: 'n1',
     name: 'Plain Maggi',
@@ -210,7 +208,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_NOODLES,
     available: true,
   },
-  // PANI PURI
+ 
   {
     id: 'p1',
     name: 'Panipuri',
@@ -247,7 +245,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_PANI_PURI,
     available: true,
   },
-  // CORN
+ 
   {
     id: 'c1',
     name: 'Butter Corn',
@@ -293,7 +291,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_CORN,
     available: true,
   },
-  // SANDWICH
+
   {
     id: 's1',
     name: 'Veg Sandwich',
@@ -330,7 +328,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_SANDWICH,
     available: true,
   },
-  // OMELETTE
+  
   {
     id: 'o1',
     name: 'Plain Omelette',
@@ -394,7 +392,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_OMELETTE,
     available: true,
   },
-  // BREAD PIZZA
+  
   {
     id: 'bp1',
     name: 'Corn Cheese Pizza',
@@ -413,7 +411,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_BREAD_PIZZA,
     available: true,
   },
-  // FRIED ITEMS
+
   {
     id: 'f1',
     name: 'Spring Potato',
@@ -495,7 +493,7 @@ export const menuItems: MenuItem[] = [
     image: IMG_FRIES,
     available: true,
   },
-  // COMBOS
+
   {
     id: 'cb1',
     name: 'Veg Platter',
