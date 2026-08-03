@@ -1,10 +1,12 @@
+// src/app/product/[id]/page.tsx
+
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import { menuItems } from "@/app/menu/page";
+import { menuItems } from "@/lib/menuData";
 import { addToCart } from "@/lib/cart";
 
 export default function ProductPage() {
@@ -12,9 +14,12 @@ export default function ProductPage() {
   const productId = params?.id as string;
   const [quantity, setQuantity] = useState(1);
 
-  // Look for a match by text ID OR by numeric array index (e.g., "1" maps to index 0)
+  // Match item by exact ID, lowercased ID, or numeric array index
   const item = menuItems.find(
-    (i, index) => i.id === productId || String(index + 1) === productId
+    (i, index) => 
+      i.id === productId || 
+      i.id.toLowerCase() === productId?.toLowerCase() ||
+      String(index + 1) === productId
   );
 
   if (!item) {
@@ -23,7 +28,7 @@ export default function ProductPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900">Product Not Found</h1>
           <p className="mt-2 text-sm text-gray-500">
-            The dish you are looking for does not exist.
+            The dish you are looking for does not exist (ID: {productId}).
           </p>
           <Link
             href="/menu"

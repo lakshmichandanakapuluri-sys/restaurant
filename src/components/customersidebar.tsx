@@ -10,7 +10,7 @@ export default function CustomerSidebar() {
     { label: "Home", href: "/", icon: "🏠" },
     { label: "QR Scan", href: "/qrscan", icon: "📷" },
     { label: "Menu", href: "/menu", icon: "🍽️" },
-    { label: "Product Details", href: "/product", icon: "🍔" },
+    { label: "Product Details", href: "/product/1", icon: "🛍️" },
     { label: "My Cart", href: "/mycart", icon: "🛒" },
     { label: "Checkout", href: "/checkout", icon: "💳" },
     { label: "Order Tracking", href: "/ordertracking", icon: "📦" },
@@ -30,17 +30,17 @@ export default function CustomerSidebar() {
       <nav className="flex-1 space-y-1 overflow-y-auto">
         {navItems.map((item) => {
           const isActive =
-            pathname === item.href ||
-            (item.href !== "/" && pathname?.startsWith(item.href));
-
+            item.href.startsWith("/product")
+              ? pathname.startsWith("/product")
+              : pathname === item.href || pathname.startsWith(item.href + "/");
           return (
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-all ${
+              className={`flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium  transition-colors ${
                 isActive
                   ? "bg-[#D9381E] text-white shadow-md shadow-[#D9381E]/20"
-                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
               <span className="text-base">{item.icon}</span>

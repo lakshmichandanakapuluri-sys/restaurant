@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import FeatureBadges from "@/components/FeatureBadges";
+import {menuItems} from "@/lib/menuData";
 
 export default function Home() {
   return (
@@ -94,7 +95,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* UV Money Saver Combo Section Updated to Product Route */}
       <section className="mt-8 px-8">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-base font-bold text-neutral-800">UV Money Saver Combo 🔥</h3>
@@ -102,74 +102,41 @@ export default function Home() {
             View All Combos
           </Link>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          
-          {/* Veg Platter */}
-          <div className="bg-white border border-neutral-200 rounded-2xl p-4 flex flex-col justify-between shadow-2xs">
-            <div>
-              <div className="w-full h-28 bg-neutral-100 rounded-xl overflow-hidden relative mb-3 border border-neutral-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=400&auto=format&fit=crop" 
-                  alt="Veg Platter" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-[10px] bg-emerald-50 text-emerald-600 font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase">Veg Platter</span>
-              <h4 className="text-sm font-extrabold text-neutral-900 mt-2">Veg Money Saver Combo</h4>
-              <p className="text-[11px] text-neutral-500 mt-1 leading-relaxed">Veg Momos, Cheeseball, Smiley, French Fries</p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between">
-              <span className="text-sm font-black text-red-600">₹120.00</span>
-              <Link href="/product/veg-platter" className="bg-red-50 hover:bg-red-100 text-red-600 text-xs font-bold px-3.5 py-1.5 rounded-lg transition border border-red-200">
-                + Add Combo
-              </Link>
-            </div>
-          </div>
+          {menuItems
+            .filter((item) => item.category === "Combos")
+            .slice(0, 3)
+            .map((item) => (
+              <div key={item.id} className="bg-white border border-neutral-200 rounded-2xl p-4 flex flex-col justify-between">
+                <div>
+                  <div className="w-full h-28 bg-neutral-100 rounded-xl overflow-hidden relative">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className="inline-block mt-3 text-[10px] bg-emerald-50 text-emerald-600 font-bold px-2.5 py-0.5 rounded border border-emerald-200 uppercase">
+                    Combo Offer
+                  </span>
+                  <h4 className="text-sm font-extrabold text-neutral-900 mt-2">{item.name}</h4>
+                  <p className="text-[11px] text-neutral-500 mt-1 leading-relaxed line-clamp-2">
+                    {item.description}
+                  </p>
+                </div>
 
-          {/* Non Veg Platter */}
-          <div className="bg-white border border-neutral-200 rounded-2xl p-4 flex flex-col justify-between shadow-2xs">
-            <div>
-              <div className="w-full h-28 bg-neutral-100 rounded-xl overflow-hidden relative mb-3 border border-neutral-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400&auto=format&fit=crop" 
-                  alt="Non Veg Platter" 
-                  className="w-full h-full object-cover"
-                />
+                <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between">
+                  <span className="text-sm font-black text-red-600">₹{item.price}.00</span>
+                  <Link
+                    href={`/product/${item.id}`}
+                    className="bg-red-50 hover:bg-red-100 text-red-600 text-xs font-bold px-3.5 py-1.5 rounded-lg transition border border-red-200"
+                  >
+                    + Add Combo
+                  </Link>
+                </div>
               </div>
-              <span className="text-[10px] bg-rose-50 text-rose-600 font-bold px-2 py-0.5 rounded border border-rose-200 uppercase">Non Veg Platter</span>
-              <h4 className="text-sm font-extrabold text-neutral-900 mt-2">Non Veg Money Saver Combo</h4>
-              <p className="text-[11px] text-neutral-500 mt-1 leading-relaxed">Chicken Momos, Cheeseball, Chicken Nuggets, Smiley, French Fries</p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between">
-              <span className="text-sm font-black text-red-600">₹180.00</span>
-              <Link href="/product/non-veg-platter" className="bg-red-50 hover:bg-red-100 text-red-600 text-xs font-bold px-3.5 py-1.5 rounded-lg transition border border-red-200">
-                + Add Combo
-              </Link>
-            </div>
-          </div>
-
-          {/* Jumbo Platter */}
-          <div className="bg-white border border-neutral-200 rounded-2xl p-4 flex flex-col justify-between shadow-2xs">
-            <div>
-              <div className="w-full h-28 bg-neutral-100 rounded-xl overflow-hidden relative mb-3 border border-neutral-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&auto=format&fit=crop" 
-                  alt="Jumbo Platter" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-[10px] bg-amber-50 text-amber-600 font-bold px-2 py-0.5 rounded border border-amber-200 uppercase">Jumbo Platter</span>
-              <h4 className="text-sm font-extrabold text-neutral-900 mt-2">Jumbo Money Saver Combo</h4>
-              <p className="text-[11px] text-neutral-500 mt-1 leading-relaxed">Veg Momos, Non Veg Momos, Cheeseball, Smiley, Nuggets, KFC Popcorn, French Fries</p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between">
-              <span className="text-sm font-black text-red-600">₹250.00</span>
-              <Link href="/product/jumbo-platter" className="bg-red-50 hover:bg-red-100 text-red-600 text-xs font-bold px-3.5 py-1.5 rounded-lg transition border border-red-200">
-                + Add Combo
-              </Link>
-            </div>
-          </div>
-
+            ))}
         </div>
       </section>
 

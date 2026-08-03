@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function HomePage() {
+  const pathname = usePathname();
   return (
     <main className="min-h-screen bg-[#120f0b] text-white">
       {/* Navigation Bar */}
@@ -48,7 +50,7 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/product"
+              href="/product/1"
               className="rounded-lg px-4 py-2 font-semibold text-gray-300 transition hover:bg-amber-500 hover:text-black"
             >
               Product Details
@@ -104,11 +106,9 @@ export default function HomePage() {
           </Link>
 
           <Link
-            href="/qrscan"
+          href="/product"
             className="whitespace-nowrap rounded-lg bg-[#2a2118] px-4 py-2 text-sm font-semibold text-white"
-          >
-            QR Scan
-          </Link>
+            ></Link>
 
           <Link
             href="/mycart"
@@ -206,17 +206,7 @@ export default function HomePage() {
           </h2>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            <Link
-              href="/menu"
-              className="rounded-2xl border border-amber-900/30 bg-[#1d1812] p-6 text-center transition hover:border-amber-500"
-            >
-              <div className="text-4xl">🍴</div>
-              <h3 className="mt-3 font-bold">Menu</h3>
-              <p className="mt-2 text-sm text-gray-500">
-                Browse food
-              </p>
-            </Link>
-
+            
             <Link
               href="/qrscan"
               className="rounded-2xl border border-amber-900/30 bg-[#1d1812] p-6 text-center transition hover:border-amber-500"
@@ -229,13 +219,14 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/mycart"
+
+              href="/menu"
               className="rounded-2xl border border-amber-900/30 bg-[#1d1812] p-6 text-center transition hover:border-amber-500"
             >
-              <div className="text-4xl">🛒</div>
-              <h3 className="mt-3 font-bold">My Cart</h3>
+              <div className="text-4xl">🍴</div>
+              <h3 className="mt-3 font-bold">Menu</h3>
               <p className="mt-2 text-sm text-gray-500">
-                View your items
+                Browse food
               </p>
             </Link>
 
@@ -247,6 +238,19 @@ export default function HomePage() {
               <h3 className="mt-3 font-bold">Product Details</h3>
               <p className="mt-2 text-sm text-gray-500">
                 Product Details
+              </p>
+            </Link>
+
+            
+
+            <Link
+              href="/mycart"
+              className="rounded-2xl border border-amber-900/30 bg-[#1d1812] p-6 text-center transition hover:border-amber-500"
+            >
+              <div className="text-4xl">🛒</div>
+              <h3 className="mt-3 font-bold">My Cart</h3>
+              <p className="mt-2 text-sm text-gray-500">
+                View your items
               </p>
             </Link>
 
