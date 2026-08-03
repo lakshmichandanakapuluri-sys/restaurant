@@ -167,7 +167,7 @@ export default function Home() {
           
           <div className="bg-white border border-neutral-200 rounded-2xl p-4 flex items-center gap-4 shadow-2xs">
             <div className="w-20 h-20 bg-neutral-100 rounded-xl overflow-hidden relative flex-shrink-0 border border-neutral-200">
-              <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=200&auto=format&fit=crop" alt="Momos" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/-1626777552726-4a6b54c97e46?w=200&auto=format&fit=crop" alt="Momos" className="w-full h-full object-cover" />
             </div>
             <div className="flex-1 min-w-0">
               <span className="text-[10px] bg-neutral-100 text-neutral-600 font-bold px-2 py-0.5 rounded">Momos</span>
